@@ -1,0 +1,18 @@
+.declarations-container {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 120px));
+  grid-auto-rows: 60px;
+  align-content: center;
+}
+
+.declarations-container-item {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(146, 146, 146);
+  padding: 12px;
+  font-size: 16px;
+  user-select: none;
+  background: linear-gradient(to right, #E2E2E2, #C9D6FF);
+}

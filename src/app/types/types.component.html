@@ -1,0 +1,14 @@
+<h1>What's the <code class="header--text-code">T</code> ?: <em>{{categoryToShow}}</em></h1>
+<div class="types-container">
+	<div class="types-container-item" *ngFor="let example of examples; index as i" (click)="example.reveal = !example.reveal">
+    <div class="counter">({{i + 1}})</div>
+	  <div class="example">
+      <code>{{example[0]}}</code>
+    </div>
+    <div class="type" *ngIf="example.reveal">
+      <code>{{example[1]}}</code>
+	    <p class="footnote" *ngIf="example[0] === 'null'">
+        Why <code>object</code>? <a href="http://2ality.com/2013/10/typeof-null.html">Dr. Axel Rauschmayer</a>
+      </p></div>
+  </div>
+</div>

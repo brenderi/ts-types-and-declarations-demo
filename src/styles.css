@@ -1,0 +1,32 @@
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 12px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+p {
+  margin: 4px 0;
+}
+
+code {
+  font-size: 18px;
+}
+
+.header--text-code {
+  font-size: 36px;
+}
+
+.footnote {
+  font-size: 12px;
+}
+
+.footnote code {
+  font-size: 12px;
+}
