@@ -21,10 +21,7 @@ export function getUserDefinedTypes() {
   // Acts as an in-memory client-side database and components use selectors to query this database
   let bookstore: Bookstore = {
     ids: myBooks.map(b => b.id),
-    entities: Object.assign(
-      {},
-      ...myBooks.map(b => ({ [b.id]: b }))
-    )
+    entities: Object.assign({}, ...myBooks.map(b => ({ [b.id]: b })))
   };
 
   // const entities = myBooks.reduce((acc, b) => {
@@ -49,10 +46,7 @@ export function getUserDefinedTypes() {
 
   let moviestore: Moviestore = {
     ids: myMovies.map(b => b.id),
-    entities: Object.assign(
-      {},
-      ...myMovies.map(b => ({ [b.id]: b }))
-    )
+    entities: Object.assign({}, ...myMovies.map(b => ({ [b.id]: b })))
   };
 
   // let combinedstore = {
