@@ -19,7 +19,7 @@ enum Categories {
 })
 export class DeclarationsComponent implements OnInit {
   examples: Array<string> = [];
-  categoryToShow = Categories.Var;
+  categoryToShow = Categories.Spread;
 
   ngOnInit() {
     this.changeOption(this.categoryToShow);

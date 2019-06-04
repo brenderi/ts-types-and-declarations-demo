@@ -18,7 +18,50 @@ export function getObjects() {
 
   function isObject(x: any) {
     // What would this check look like?
-    return (typeof x === 'object' && x !== null) || typeof x === 'function';
+    
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//return (typeof x === 'object' && x !== null) || typeof x === 'function';

@@ -20,11 +20,11 @@ export function getSpread() {
     ]
   };
 
-  const updatedMediaFile = { ...myMediaFile, ...{ tags: ['one', 'two', 'three'] } };
+  const updatedMediaFile = { ...myMediaFile, tags: ['one', 'two', 'three'] };
 
   return [
     ...myMediaFile.tags,
-    updatedMediaFile.id,
-    ...updatedMediaFile.tags
+    //updatedMediaFile.id,
+    //...updatedMediaFile.tags
   ];
 }

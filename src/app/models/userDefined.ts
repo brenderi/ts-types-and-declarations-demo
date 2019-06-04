@@ -24,30 +24,24 @@ export function getUserDefinedTypes() {
     entities: Object.assign({}, ...myBooks.map(b => ({ [b.id]: b })))
   };
 
-  // const entities = myBooks.reduce((acc, b) => {
-  //   acc[b.id] = b;
-  //   return acc;
-  // }, {});
-  // const bookstore2 = { ids: Object.keys(entities), entities };
+  // type Movie = {
+  //   id: string,
+  //   title: string,
+  //   directors: string[],
+  //   writers: string[]
+  // };
 
-  type Movie = {
-    id: string,
-    title: string,
-    directors: string[],
-    writers: string[]
-  };
+  // type Moviestore = {
+  //   ids: string[],
+  //   entities: { [key: string]: Movie }
+  // };
 
-  type Moviestore = {
-    ids: string[],
-    entities: { [key: string]: Movie }
-  };
+  // let myMovies = movies.default as Movie[];
 
-  let myMovies = movies.default as Movie[];
-
-  let moviestore: Moviestore = {
-    ids: myMovies.map(b => b.id),
-    entities: Object.assign({}, ...myMovies.map(b => ({ [b.id]: b })))
-  };
+  // let moviestore: Moviestore = {
+  //   ids: myMovies.map(b => b.id),
+  //   entities: Object.assign({}, ...myMovies.map(b => ({ [b.id]: b })))
+  //};
 
   // let combinedstore = {
   //   'books': bookstore,
@@ -56,16 +50,16 @@ export function getUserDefinedTypes() {
 
   return [
     myBooks[2].author,
-    myBooks.filter(b => b.id === '978-1-60699-959-2')[0].title,
-    bookstore.entities['978-1-60699-959-2'].title,
-    bookstore.entities[bookstore.ids[1]].author,
+    //myBooks.filter(b => b.id === '978-1-60699-959-2')[0].title,
+    //bookstore.entities['978-1-60699-959-2'].title,
+    //bookstore.entities[bookstore.ids[1]].author,
     // Selector used to query the state database
-    ...getBooksByAuthor('David Mitchell').map(i => i.title)
+    //...getBooksByAuthor('David Mitchell').map(i => i.title)
   ];
 
   function getBooksByAuthor(name: string): Book[] {
     // Stackblitz Angular projects can't target ECMAScript 2017 yet so Object.values isn't known...
     return Object.values(bookstore.entities).filter(b => b.author === name, []);
   }
-}
 
+}
