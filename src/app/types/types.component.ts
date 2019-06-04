@@ -21,7 +21,7 @@ enum Categories {
 })
 export class TypesComponent implements OnInit {
   examples: Array<[string, string?]> = [];
-  categoryToShow = Categories.UserDefinedTypes;
+  categoryToShow = Categories.Primitives;
 
   ngOnInit() {
     this.changeOption(this.categoryToShow);
